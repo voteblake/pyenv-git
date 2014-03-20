@@ -1,0 +1,6 @@
+post_install(){
+	echo 'export PYENV_ROOT="/usr/lib/pyenv"' >> /etc/bash.bashrc
+	echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> /etc/bash.bashrc
+	echo 'eval "$(pyenv init -"' >> /etc/bash.bashrc
+	exec $SHELL
+}
